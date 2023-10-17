@@ -19,6 +19,9 @@ int main()
     float salarioTotal;
     float mediaSalarial;
 
+    //como determinar a maior idade e a menor idade?
+    //Nao consigo imprimir os resultados
+    
             salarioTotal += salario;
             pessoas++;
             mediaSalarial = salarioTotal / pessoas;
@@ -36,7 +39,7 @@ int main()
         printf("|=====================================================|\n");
         printf("|                     M E N U                         |\n");
         printf("|=====================================================|\n");
-        printf("|        C”DIGO          |          DESCRI«√O         |\n");
+        printf("|        C√ìDIGO          |          DESCRI√á√ÉO         |\n");
         printf("|------------------------|----------------------------|\n");
         printf("|                        |                            |\n");
         printf("|          1             |      Adicionar Pessoa      |\n");
@@ -46,7 +49,7 @@ int main()
         printf("|=====================================================| \n");
         
 
-        printf("\nDigite a opÁ„o desejada: ");
+        printf("\nDigite a op√ß√£o desejada: ");
         scanf("%d", &codigo);
 
 
@@ -68,7 +71,7 @@ int main()
 
             fflush(stdin);
 
-            printf("\nDigite o sal·rio: R$ ");
+            printf("\nDigite o sal√°rio: R$ ");
             scanf("%f", &salario);
                 break;
             
@@ -77,16 +80,16 @@ int main()
             codigo = 2;
             
             system("cls || clear");
-            printf("\nMÈdia Salarial do Grupo: R$", mediaSalarial);
+            printf("\nM√©dia Salarial do Grupo: R$", mediaSalarial);
             printf("\nMaior idade: ", maiorIdade);
             printf("\nMenor idade: ", menorIdade);
-            printf("\nMulheres com sal·rio acima de R$ 3.000,00: \n", mulheresSalario3K);
+            printf("\nMulheres com sal√°rio acima de R$ 3.000,00: \n", mulheresSalario3K);
         
                 break;
             
             default:
 
-            printf("OpÁ„o Inv·lida! Digite o cÛdigo novamente.");
+            printf("Op√ß√£o Inv√°lida! Digite o c√≥digo novamente.");
 
                 break;
         }   
