@@ -23,15 +23,17 @@ int main()
     
     do
     {
-
-        printf("                                                       \n");
+        printf("\n-------------------------------------------------------");
+        printf("\n            ENTREVISTA SALARIAL DA EMPRESA             ");
+        printf("\n-------------------------------------------------------");
+        printf("\n");
         printf("|=====================================================|\n");
         printf("|                     M E N U                         |\n");
         printf("|=====================================================|\n");
         printf("|        CÓDIGO          |          DESCRIÇÃO         |\n");
         printf("|------------------------|----------------------------|\n");
         printf("|                        |                            |\n");
-        printf("|          1             |       Adicionar Grupo      |\n");
+        printf("|          1             |       Adicionar Pessoa     |\n");
         printf("|                        |                            |\n");
         printf("|          2             |  Sair e Exibir Resultados  |\n");
         printf("|                        |                            |\n");
@@ -46,20 +48,31 @@ int main()
         {
             
             case 1:
-            
-                printf("\nQuantas pessoas serão cadastradas? ");
-                scanf("%d", &pessoas);
-                system("cls || clear");
-                
-                for ( i = 1; i <= pessoas; i++)
-                {   
 
-                    printf("\n=============================");
-                    printf("\n         %dª PESSOA          ", i);
-                    printf("\n=============================");
-                    printf("\nDigite a idade: ", i);
+        printf("\n-------------------------------------------------------");
+        printf("\n            ENTREVISTA SALARIAL DA EMPRESA             ");
+        printf("\n-------------------------------------------------------");
+
+                    pessoas++;
+                    
+                    if (pessoas > 1)
+                    {
+                    printf("\n=======================================================");
+                    printf("\n                 Dados da %dª pessoa                   ", pessoas);
+                    printf("\n=======================================================");
+                    printf("\nDigite a idade: ");
                     scanf("%d", &idade);
+                    }
+                    else
+                    {
+                    printf("\n=======================================================");
+                    printf("\n                   Dados da pessoa                     ", pessoas);
+                    printf("\n=======================================================");
 
+                    printf("\nDigite a idade: ");
+                    scanf("%d", &idade);
+                    }
+                
                     maiorIdade = idade > maiorIdade ? idade : maiorIdade;
                     menorIdade = idade < menorIdade ? idade : menorIdade;
                     
@@ -72,7 +85,9 @@ int main()
                     printf("\nDigite o salário: R$");
                     scanf("%f", &salario);
 
+                    system("cls || clear");
                     printf("\n");
+                    
 
                     salarioTotal += salario;
                     
@@ -80,9 +95,7 @@ int main()
                     {
                         mulheresSalario5K++;
                     }
-    
-                }
-                
+
                     break;
             
             case 2:
@@ -94,10 +107,11 @@ int main()
                     system("cls || clear");
                     printf("\nRESULTADO DA PESQUISA");
                     printf("\n");
-                    printf("\nMédia Salarial do Grupo: R$ %.2f", mediaSalarial);
+                    printf("\nM?dia Salarial do Grupo: R$ %.2f", mediaSalarial);
                     printf("\nMaior idade: %d anos", maiorIdade);
                     printf("\nMenor idade: %d anos", menorIdade);
-                    printf("\nMulheres com salário acima de R$ 5000,00: %d \n", mulheresSalario5K);
+                    printf("\nMulheres com salário acima de R$ 5000,00: %d", mulheresSalario5K);
+                    printf("\nPessoas entrevistadas: %d \n", pessoas);
                     
                 }
                 else
@@ -110,7 +124,7 @@ int main()
             
             default:
 
-                printf("Opção Inválida! Digite o código novamente.");
+                printf("Oção Inválida! Digite o código novamente.");
 
                 break;
         }   
@@ -118,6 +132,5 @@ int main()
 
     } while (codigo != 2);
 
-
-
 }
+
